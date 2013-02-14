@@ -25,7 +25,7 @@ production:
   logout_url: http://dev.pointgaming.com/users/sign_out
   signup_url: http://dev.pointgaming.com/users/sign_up
   api_auth_token: '25ds-45p56q63-56b75s5m-ndma2fd86gkjo4n6-5124z5568-68f9s'
-  main_app_url: http://www.pointgaming.com/
+  main_app_url: http://dev.pointgaming.com/
   store_url: http://store.pointgaming.com/
   store_api_url: http://store.pointgaming.com/private/api/
   store_api_auth_token: '25ds-45p56q63-56b75s5m-ndma2fd86gkjo4n6-5124z5568-68f9s'
