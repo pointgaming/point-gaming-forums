@@ -93,11 +93,15 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.0)
+    oj (2.0.4)
     orm_adapter (0.4.0)
     pg (0.14.1)
     polyglot (0.3.3)
     pygments.rb (0.2.4)
       rubypython (~> 0.5.3)
+    rabl (0.7.10)
+      activesupport (>= 2.3.14)
+      multi_json (~> 1.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -184,7 +188,9 @@ DEPENDENCIES
   forem-theme-base!
   jquery-rails
   kaminari (= 0.13.0)
+  oj
   pg
+  rabl
   rails (= 3.2.12)
   redis-rails
   sass-rails (~> 3.2.3)

@@ -17,6 +17,10 @@ gem 'forem-theme-base', :git => "git://github.com/radar/forem-theme-base.git"
 
 gem 'devise'
 
+gem 'rabl'
+
+gem 'oj'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
