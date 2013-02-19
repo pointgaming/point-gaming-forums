@@ -1,6 +1,10 @@
 PointGamingForums::Application.configure do
+
+  config.action_mailer.default_url_options = { :host => "dev.pointgaming.com" }
+
   # session store
   config.session_store :redis_store, :key => '_pg_session', :domain => '.pointgaming.com'
+
 
   # Settings specified here will take precedence over those in config/application.rb
 
