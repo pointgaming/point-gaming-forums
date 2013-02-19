@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate_forem_user
 
   def forem_user
     current_user
