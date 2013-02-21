@@ -1,4 +1,5 @@
 Forem.user_class = "User"
+
 Forem.email_from_address = "please-change-me@example.com"
 # If you do not want to use gravatar for avatars then specify the method to use here:
 # Forem.avatar_user_method = :custom_avatar_url
@@ -15,3 +16,8 @@ Forem.sign_in_path = APP_CONFIG['login_url']
 # end
 #
 # By default, these lines will use the layout located at app/views/layouts/forem.html.erb in your application.
+
+# custom overrides
+require 'forem/models/forum'
+require 'forem/models/post'
+require 'forem/models/topic'
