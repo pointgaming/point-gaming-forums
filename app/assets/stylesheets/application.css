@@ -8,11 +8,24 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *=require bootstrap_and_overrides
  *=require akira
  *= require "forem/base/style"
+ *= require pg_design
+ *= require ie
  *= require_self
  *= require_tree .
  */
 #logo-container {
   margin-bottom: 15px;
+}
+
+.search-form input[type="text"] {
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+
+#header, #wrapper {
+  overflow: visible;
 }
