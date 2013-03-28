@@ -10,10 +10,10 @@
               <li class="divider"></li>
             <% end %>
             <li><%= link_to "Streams", "#{main_app_path}user_streams" %></li>
-            <li><%= link_to "Teams", "#{main_app_path}teams" %></li>
+            <li><%= link_to "Teams", "#{main_app_path}t" %></li>
             <li><%= link_to "Tournaments", "#" %></li>
             <li class="divider"></li>
-            <li><%= link_to "Profile", "#{main_app_path}users/#{pg_user_id}/profile/edit" %></li>
+            <li><%= link_to "Profile", "#{main_app_path}u/#{pg_user_id}/profile/edit" %></li>
             <li><%= link_to "Settings", "#{main_app_path}settings" %></li>
             <li class="divider"></li>
             <li><%= link_to "Logout", destroy_user_session_path, :method=>'delete' %></li>
@@ -32,7 +32,7 @@
         <ul>
           <%= navItem "Games", "#{main_app_path}games" %>
           <%= navItem "Tournaments", "#{main_app_path}tournaments" %>
-          <%= navItem "Streams", "#{main_app_path}streams" %>
+          <%= navItem "Streams", "#{main_app_path}s" %>
           <%= navItem "Store", store_path %>
           <%= navItem "Forums", forum_path, true %>
         </ul>
