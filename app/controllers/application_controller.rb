@@ -11,4 +11,11 @@ class ApplicationController < ActionController::Base
   helper_method :forem_user
 
   protect_from_forgery
+
+  def current_pg_user
+    @PgUser ||= PgUser.find(pg_user_id)
+  rescue
+    nil
+  end
+  helper_method :current_pg_user
 end

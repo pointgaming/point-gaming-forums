@@ -3,7 +3,7 @@
     <ul class="pull-right">
       <% if user_signed_in? %>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= "#{current_user.username} (#{current_user.points})" %> <b class="caret"></b></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= "#{current_user.username} (#{current_pg_user.try(:points)})" %> <b class="caret"></b></a>
           <ul class="dropdown-menu">
             <% if current_user.admin? %>
               <li><%= link_to "Admin", "#{main_app_path}admin" %></li>
@@ -13,7 +13,9 @@
             <li><%= link_to "Teams", "#{main_app_path}teams" %></li>
             <li><%= link_to "Tournaments", "#" %></li>
             <li class="divider"></li>
-            <li><%= link_to "Profile", "#{main_app_path}u/#{pg_user_id}/profile/edit" %></li>
+            <% if current_pg_user.present? %>
+              <li><%= link_to "Profile", "#{main_app_path}u/#{current_pg_user.try(:slug)}/profile/edit" %></li>
+            <% end %>
             <li><%= link_to "Settings", "#{main_app_path}settings" %></li>
             <li class="divider"></li>
             <li><%= link_to "Logout", destroy_user_session_path, :method=>'delete' %></li>
