@@ -1,0 +1,19 @@
+<fieldset>
+  <div class="control-group">
+    <%= f.label "moderation_option_approve", t('approve', :scope => 'forem.posts.moderation'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.radio_button "moderation_option", "approve" %>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <%= f.label "moderation_option_spam", t('spam', :scope => 'forem.posts.moderation'), :class => 'control-label' %>
+    <div class="controls">
+      <%= f.radio_button "moderation_option", "spam" %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit t('moderate', :scope => 'forem.posts.moderation'), :class => 'btn' %>
+  </div>
+</fieldset>

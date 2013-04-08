@@ -1,0 +1,139 @@
+table.subdued {
+  border-collapse: separate;
+  margin-bottom: 35px;
+}
+
+
+table.subdued thead tr {
+  height: 82px;
+}
+
+table.subdued thead tr th.text-padding,
+table.subdued thead tr th.desc-and-last-post,
+table.subdued thead tr th.byline,
+table.subdued thead tr th.latest-post {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+table.subdued thead h2 {
+  font-size: 175%;
+  letter-spacing: -1px;
+}
+
+table.subdued thead a,
+table.subdued thead a:visited,
+table.subdued thead a:hover {
+  color: #414141;
+}
+
+footer#admin_link {
+  text-align: right;
+}
+
+footer#admin_link a,
+footer#admin_link a:visited,
+footer#admin_link a:hover {
+  color: #b20000;
+}
+
+table.subdued a,
+table.subdued a:visited,
+table.subdued a:hover {
+  color: #b20000;
+}
+
+#forums .title {
+  font-size: 160%;
+  letter-spacing: -1px;
+}
+
+table.subdued tr:first-child th:first-child {
+  -moz-border-radius-topleft:8px;
+  -webkit-border-top-left-radius:8px;
+  border-top-left-radius:8px;
+  border-left: 1px solid #efefef;
+}
+
+table.subdued tr:first-child th:last-child {
+  -moz-border-radius-topright:8px;
+  -webkit-border-top-right-radius:8px;
+  border-top-right-radius:8px;
+  border-right: 1px solid #efefef;
+}
+
+table.subdued tr:last-child td:first-child {
+  -moz-border-radius-bottomleft:8px;
+  -webkit-border-bottom-left-radius:8px;
+  border-bottom-left-radius:8px
+}
+
+table.subdued tr:last-child td:last-child {
+  -moz-border-radius-bottomright:8px;
+  -webkit-border-bottom-right-radius:8px;
+  border-bottom-right-radius:8px
+}
+
+table.subdued thead th {
+  background-image: url('<%= asset_path('table_header_gradient.png') %>');
+  padding: 0;
+  vertical-align: middle;
+}
+
+table.subdued tbody tr:first-child td { border-top: none; }
+table.subdued tbody tr:last-child td { border-bottom: 1px solid #d1d1d1; }
+
+table.subdued tbody tr.odd td:first-child { border-left: 1px solid #f0f0f0; }
+table.subdued tbody tr.odd td:last-child { border-right: 1px solid #f0f0f0; }
+table.subdued tbody tr.even td:first-child { border-left: 1px solid #efefef; }
+table.subdued tbody tr.even td:last-child { border-right: 1px solid #efefef; }
+
+table.subdued tbody tr.even td {
+  background-color: #fefefe;
+}
+
+table.subdued tbody td {
+  background-color: #fff;
+  padding: 20px;
+  border-top: 1px solid #ededed;
+}
+
+table.subdued th.topics-count, table.subdued th.posts-count, table.subdued th.views-count {
+  text-align: center;
+  vertical-align: middle;
+  width: 80px;
+}
+
+table.subdued tbody .posts-count, table.subdued tbody .views-count {
+  padding: 20px 0;
+  width: 80px;
+}
+
+table.subdued tbody .latest-post {
+  width: 110px;
+}
+
+table.subdued th.icon {
+  text-align: center;
+  vertical-align: middle;
+  width: 65px;
+}
+
+table.subdued tbody td.icon {
+  vertical-align: top;
+  padding-right: 0;
+}
+
+td.topics-count, td.posts-count, td.views-count {
+  vertical-align: middle;
+  text-align: center;
+}
+
+table.subdued tbody td .description {
+  color: #414141;
+  font-size: 90%;
+}
+
+table.subdued tbody td .last_post {
+  font-size: 80%;
+}
