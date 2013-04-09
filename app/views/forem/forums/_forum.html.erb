@@ -1,5 +1,16 @@
 <% if can?(:read, forum) %>
   <tr class="forum <%= cycle("odd", "even") %>">
+    <td class="icon">
+      <% if forem_user && view = forum.view_for(forem_user) %>
+        <% if forum.posts.exists?(["forem_posts.created_at > ?", view.updated_at]) %>
+          <%= image_tag 'new_posts.png' %>
+        <% else %>
+          <%= image_tag 'no_new_posts.png' %>
+        <% end %>
+      <% else %>
+        <%= image_tag 'no_new_posts.png' %>
+      <% end %>
+    </td>
     <td>
       <%= link_to forem_emojify(forum.title), forem.forum_path(forum), :class => "title" %>
       <div class='description'><%= forem_format(forum.description) %></div>
