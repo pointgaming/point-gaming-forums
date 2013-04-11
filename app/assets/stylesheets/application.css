@@ -54,7 +54,6 @@ div.header-toolbar a:hover {
   color: #fff;
 }
 
-div.header-toolbar .dropdown-menu > li > a:visited,
-div.header-toolbar .dropdown-menu > li > a:hover {
+div.header-toolbar .dropdown-menu > li > a:visited {
   color: #333;
 }
