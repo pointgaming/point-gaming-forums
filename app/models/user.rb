@@ -11,4 +11,14 @@ class User < ActiveRecord::Base
   def to_s
     username
   end
+
+  def pg_user
+    @PgUser ||= PgUser.find(self.username)
+  rescue
+    nil
+  end
+
+  def forem_admin?
+    pg_user && pg_user.group && pg_user.group.permissions.include?('forums_admin')
+  end
 end

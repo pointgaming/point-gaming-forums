@@ -13,7 +13,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
 
   def current_pg_user
-    @PgUser ||= PgUser.find(pg_user_id)
+    return nil unless forem_user
+
+    @PgUser ||= PgUser.find(forem_user.username)
   rescue
     nil
   end
