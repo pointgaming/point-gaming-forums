@@ -79,5 +79,6 @@ PointGamingForums::Application.configure do
 
   config.after_initialize do
     Rails.application.routes.default_url_options = Rails.application.config.action_mailer.default_url_options
+    Forem::Engine.routes.default_url_options = Rails.application.config.action_mailer.default_url_options
   end
 end
