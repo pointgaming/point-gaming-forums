@@ -28,7 +28,7 @@ Forem::Post.class_eval do
   end
 
   def url
-    forum_topic_path(self.topic.forum, self.topic)
+    forum_topic_url(self.topic.forum, self.topic)
   end
 
 end
