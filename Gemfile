@@ -8,6 +8,7 @@ gem 'rails', '3.2.12'
 gem 'pg'
 
 gem 'redis-rails'
+gem 'tire'
 
 gem 'forem', :git => "git://github.com/radar/forem.git"
 
