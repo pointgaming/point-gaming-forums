@@ -1,0 +1,23 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <td>
+          <%= link_to result.display_name, result.url %>
+          <% if result.description %>
+            <p><%= result.description %></p>
+          <% end %>
+        </td>
+        <td><%= result.type %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @results %>

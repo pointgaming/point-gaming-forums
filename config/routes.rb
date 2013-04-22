@@ -5,6 +5,8 @@ PointGamingForums::Application.routes.draw do
     end
   end
 
+  resources :search, only: [:index]
+
   devise_for :users
 
   # This line mounts Forem's routes at /forums by default.
