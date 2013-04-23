@@ -3,3 +3,11 @@
 
 en:
   hello: "Hello world"
+  search:
+    type:
+      spree/product: "Store"
+      forem/post: "Forum"
+      game: "Game"
+      stream: "Stream"
+      team: "Team"
+      user: "User"
