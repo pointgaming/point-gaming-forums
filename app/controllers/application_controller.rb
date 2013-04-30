@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  include ::SslRequirement
 
   def pg_user_id
     session.has_key?('warden.user.user.key') ? session['warden.user.user.key'].at(1).first : nil
