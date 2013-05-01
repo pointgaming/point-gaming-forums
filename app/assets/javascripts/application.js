@@ -12,9 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.cookie
 //= require twitter/bootstrap/bootstrap-dropdown
 //= require twitter/bootstrap/bootstrap-tooltip
 //= require twitter/bootstrap/bootstrap-popover
 //= require bootstrap-typeahead
+//= require bootstrap-modal
+//= require bootstrap-modalmanager
 //= require search_typeahead
 //= require_tree .
+$(function(){
+    new PointGaming.DesktopController();
+});

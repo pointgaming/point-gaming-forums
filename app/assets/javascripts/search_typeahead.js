@@ -15,10 +15,24 @@
       display: 'name', 
       val: 'url',
       itemSelected: function(item, val, text){
-        if (item.is('.category')) {
+        if (item.is('.category') || item.length === 0) {
           return false;
+        } else if (item.data('type') === 'Game') {
+          var link = $('a#search_typeahead_link_for_game');
+          if (link.length === 0) {
+            link = $('<a id="search_typeahead_link_for_game" />');
+            link.appendTo($('body'));
+          }
+
+          link.attr('href', item.data('value'))
+            .attr('data-action', 'joinLobby')
+            .addClass('requires-desktop-client check-for-client')
+            .click();
+
+          $('input.search-query', 'form.navbar-search.search-form').val('');
+        } else {
+          window.location.href = val;
         }
-        window.location.href = val;
       },
       select: function() {
         var $selectedItem = this.$menu.find('.active');
@@ -35,11 +49,8 @@
           var active = this.$menu.find('.active').removeClass('active');
           var prev = active.prev();
 
-          if (!prev.length && active.parent().parent().is('.category')) {
-            var prevCategory = active.parent().parent().prev();
-            if (prevCategory.length) {
-              prev = prevCategory.find('li').last();
-            }
+          if (prev.is('.category')) {
+            prev = prev.prev();
           }
 
           if (!prev.length) {
@@ -52,11 +63,8 @@
           var active = this.$menu.find('.active').removeClass('active');
           var next = active.next();
 
-          if (!next.length && active.parent().parent().is('.category')) {
-            var nextCategory = active.parent().parent().next();
-            if (nextCategory.length) {
-              next = nextCategory.find('li').first();
-            }
+          if (next.is('.category')) {
+            next = next.next();
           }
 
           if (!next.length) {
@@ -64,6 +72,10 @@
           }
 
           next.addClass('active');
+      },
+      mouseenter: function (e) {
+          this.$menu.find('.active').removeClass('active');
+          $(e.currentTarget).not('.category').addClass('active');
       },
       // We will create a custom render function so that we can group the results by type
       render: function (items) {
@@ -97,9 +109,9 @@
             categorized_items[type].push(item);
         },
         convert = function(category_name, items) {
-            var category = $('<li class="category"><span>' + category_name + '</span><ul class="children"></ul></li>');
-            category.find('ul.children').html(items);
-            return category;
+            var category = $('<li class="category"><span>' + category_name + '</span></li>');
+            items.unshift(category);
+            return items;
         },
         key,
         results = [];
@@ -108,7 +120,7 @@
 
     for (key in categorized_items) {
       if (categorized_items.hasOwnProperty(key)) {
-        results.push(convert(key, categorized_items[key]));
+        Array.prototype.push.apply(results, convert(key, categorized_items[key]));
       }
     }
 
