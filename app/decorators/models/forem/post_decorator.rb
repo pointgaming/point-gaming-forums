@@ -33,7 +33,7 @@ Forem::Post.class_eval do
     mapping do
       indexes :_id, type: 'string', index: :not_analyzed, as: 'id'
       indexes :display_name, type: 'string', analyzer: 'snowball', as: 'topic.subject'
-      indexes :prefix, type: 'string', index_analyzer: 'partial_match', search_analyzer: 'snowball', boost: 2, as: 'text'
+      indexes :prefix, type: 'string', index_analyzer: 'partial_match', search_analyzer: 'snowball', boost: 2, as: 'topic.subject'
       indexes :forum, type: 'string', analyzer: 'snowball', as: 'topic.forum.name'
       indexes :description, type: 'string', boost: 10, analyzer: 'snowball', as: 'text'
       indexes :url, type: 'string', :index => 'no', as: 'url'
