@@ -55,6 +55,14 @@ GEM
     blankslate (3.1.2)
     builder (3.0.4)
     cancan (1.6.8)
+    capistrano (2.15.4)
+      highline
+      net-scp (>= 1.0.0)
+      net-sftp (>= 2.0.0)
+      net-ssh (>= 2.0.14)
+      net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -79,6 +87,7 @@ GEM
     friendly_id (4.0.9)
     gemoji (1.1.2)
     hashr (0.0.22)
+    highline (1.6.18)
     hike (1.2.1)
     i18n (0.6.1)
     journey (1.0.4)
@@ -96,6 +105,13 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.21)
     multi_json (1.6.0)
+    net-scp (1.1.0)
+      net-ssh (>= 2.6.5)
+    net-sftp (2.1.1)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.7)
+    net-ssh-gateway (1.2.0)
+      net-ssh (>= 2.6.5)
     oj (2.0.4)
     orm_adapter (0.4.0)
     pg (0.14.1)
@@ -196,6 +212,8 @@ PLATFORMS
 
 DEPENDENCIES
   bartt-ssl_requirement (~> 1.4.0)
+  capistrano
+  capistrano-ext
   coffee-rails (~> 3.2.1)
   devise
   forem!
