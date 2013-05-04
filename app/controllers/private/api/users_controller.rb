@@ -1,11 +1,6 @@
-class Private::Api::UsersController < ActionController::Base
-  include ::SslRequirement
-  ssl_required :create, :update, :show, :destroy
-  before_filter :authenticate_api!
+class Private::Api::UsersController < Private::Api::BaseController
   before_filter :ensure_params, only: [:create, :update]
   before_filter :ensure_user, only: [:update, :destroy]
-
-  respond_to :json
 
   def create
     @user = User.new params[:user]

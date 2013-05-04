@@ -1,6 +1,7 @@
 PointGamingForums::Application.routes.draw do
   namespace :private do
     namespace :api do
+      resources :site_settings, id: /[^\/]+?/, :format => /json|csv|xml|yaml/
       resources :users, id: /[^\/]+?/, :format => /json|csv|xml|yaml/
     end
   end

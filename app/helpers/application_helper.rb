@@ -26,4 +26,9 @@ module ApplicationHelper
     def destroy_user_session_path
       APP_CONFIG['logout_url']
     end
+
+    def desktop_client_latest_version
+      SiteSetting.find_by_key('desktop_version').try(:value) || '0.0.0'
+    end
+
 end

@@ -14,6 +14,18 @@
     <%= stylesheet_link_tag "application", :media => "all" %>
 
     <%= javascript_include_tag "application" %>
+    <%= javascript_tag do %>
+      var PointGaming;
+      if (!PointGaming) {
+        PointGaming = {};
+      }
+
+      PointGaming.desktop_client_latest_version = "<%= desktop_client_latest_version %>";
+      <% if current_user %>
+        PointGaming.username = "<%= current_user.username %>";
+      <% end %>
+    <% end %>
+
   </head>
   <body>
 

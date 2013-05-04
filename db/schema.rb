@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424223812) do
+ActiveRecord::Schema.define(:version => 20130504011151) do
 
   create_table "forem_categories", :force => true do |t|
     t.string   "name",       :null => false
@@ -126,6 +126,11 @@ ActiveRecord::Schema.define(:version => 20130424223812) do
 
   add_index "installs", ["email"], :name => "index_installs_on_email", :unique => true
   add_index "installs", ["reset_password_token"], :name => "index_installs_on_reset_password_token", :unique => true
+
+  create_table "site_settings", :force => true do |t|
+    t.string "key"
+    t.string "value"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",               :null => false
