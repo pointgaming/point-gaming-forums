@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   def current_pg_user
     return nil unless forem_user
 
-    @PgUser ||= PgUser.find(forem_user.slug)
+    @PgUser ||= PgUser.find(pg_user_id)
   rescue
     nil
   end

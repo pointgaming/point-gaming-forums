@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   end
 
   def pg_user
-    @PgUser ||= PgUser.find(self.username)
+    @PgUser ||= PgUser.find(1, params: { slug: self.slug })
   rescue
     nil
   end
