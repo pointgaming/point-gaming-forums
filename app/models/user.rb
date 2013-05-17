@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
   end
 
   def forem_admin?
-    pg_user && pg_user.group && pg_user.group.permissions.include?('forums_admin')
+    pg_user.present? && pg_user.respond_to?(:group) && pg_user.group.permissions.include?('forums_admin')
   end
 
   def populate_slug
