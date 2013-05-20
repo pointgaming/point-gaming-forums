@@ -118,6 +118,8 @@ GEM
     polyglot (0.3.3)
     pygments.rb (0.2.4)
       rubypython (~> 0.5.3)
+    quiet_assets (1.0.2)
+      railties (>= 3.1, < 5.0)
     rabl (0.7.10)
       activesupport (>= 2.3.14)
       multi_json (~> 1.0)
@@ -195,6 +197,9 @@ GEM
     treetop (1.4.12)
       polyglot
       polyglot (>= 0.3.1)
+    turbo-sprockets-rails3 (0.3.6)
+      railties (> 3.2.8, < 4.0.0)
+      sprockets (>= 2.0.0)
     twitter-bootstrap-rails (2.2.3)
       actionpack (>= 3.1)
       execjs
@@ -222,10 +227,12 @@ DEPENDENCIES
   kaminari (= 0.13.0)
   oj
   pg
+  quiet_assets
   rabl
   rails (= 3.2.12)
   redis-rails
   sass-rails (~> 3.2.3)
   tire
+  turbo-sprockets-rails3
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)

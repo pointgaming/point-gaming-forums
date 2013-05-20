@@ -34,6 +34,11 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'turbo-sprockets-rails3'
+end
+
+group :development do
+  gem 'quiet_assets'
 end
 
 gem 'twitter-bootstrap-rails'
