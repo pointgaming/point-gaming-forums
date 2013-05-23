@@ -3,6 +3,12 @@
 
 en:
   hello: "Hello world"
+  date:
+    formats:
+      default: ! '%m/%d/%Y'
+  time:
+    formats:
+      default: ! '%m/%d/%Y %I:%M %p'
   search:
     type:
       spree/product: "Store"
