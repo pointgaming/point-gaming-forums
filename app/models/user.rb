@@ -20,8 +20,12 @@ class User < ActiveRecord::Base
     nil
   end
 
+  def has_permission?(permission_name)
+    pg_user.present? && pg_user.respond_to?(:group) && pg_user.group.permissions.include?(permission_name)
+  end
+
   def forem_admin?
-    pg_user.present? && pg_user.respond_to?(:group) && pg_user.group.permissions.include?('forums_admin')
+    has_permission?('forums_admin')
   end
 
   def populate_slug

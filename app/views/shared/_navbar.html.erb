@@ -9,7 +9,7 @@
               <li><%= link_to "Cart: (#{current_order.item_count}) $#{current_order.total}", "#{store_path}cart" %></li>
               <li class="divider"></li>
             <% end %>
-            <% if current_user.admin? %>
+            <% if current_user.has_permission?("show_admin_link") %>
               <li><%= link_to "Admin", "#{main_app_path}admin" %></li>
               <li class="divider"></li>
             <% end %>
