@@ -15,16 +15,20 @@ class ApplicationController < ActionController::Base
   helper_method :current_pg_user
 
   def current_order
-    return @current_order if @current_order
-
-    @current_order = nil
-    if session[:order_id]
-      current_order = Store::Order.find session[:order_id]
-      @current_order = current_order if current_order && current_order.state === 'cart'
-    end
-
-    @current_order
+    @current_order ||= get_current_order
   end
   helper_method :current_order
+
+  private
+
+  def get_current_order
+    if session[:order_id].present?
+      current_order = Store::Order.find(session[:order_id])
+      current_order.completed_at.present? ? nil : current_order
+    end
+  rescue => e
+    logger.warn "get_current_order failed: #{e.class}: #{e.message}"
+    nil
+  end
 
 end
