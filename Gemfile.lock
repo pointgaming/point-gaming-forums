@@ -20,7 +20,7 @@ GIT
 
 GIT
   remote: git@github.com:pointgaming/point-gaming-frontend.git
-  revision: 43ff775be2fca934790ff5462c8fc4200e0f5e1f
+  revision: bc57bde6e20caa185a60bd4fc785ccb86738755b
   branch: master
   specs:
     point_gaming_frontend (0.0.2)
@@ -118,7 +118,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-    multi_json (1.7.6)
+    multi_json (1.7.7)
     net-scp (1.1.1)
       net-ssh (>= 2.6.5)
     net-sftp (2.1.2)
@@ -156,7 +156,7 @@ GEM
       rake (>= 0.8.7)
       rdoc (~> 3.4)
       thor (>= 0.14.6, < 2.0)
-    rake (10.0.4)
+    rake (10.1.0)
     rdoc (3.12.2)
       json (~> 1.4)
     redis (3.0.4)
