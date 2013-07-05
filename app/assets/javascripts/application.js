@@ -10,17 +10,11 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery.cookie
-//= require twitter/bootstrap/bootstrap-dropdown
+//= require point_gaming_frontend
 //= require twitter/bootstrap/bootstrap-tooltip
 //= require twitter/bootstrap/bootstrap-popover
-//= require bootstrap-typeahead
-//= require bootstrap-modal
-//= require bootstrap-modalmanager
-//= require search_typeahead
 //= require_tree .
 $(function(){
     new PointGaming.DesktopController();
+    new PointGaming.ToolbarController();
 });

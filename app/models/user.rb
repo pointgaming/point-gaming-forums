@@ -10,6 +10,9 @@ class User < ActiveRecord::Base
   attr_accessible :username, :email, :password, :password_confirmation, :remember_me, :admin, :avatar_thumb_url
   # attr_accessible :title, :body
 
+  delegate :points, :to => :pg_user
+  delegate :time_zone, :to => :pg_user
+
   def to_s
     username
   end

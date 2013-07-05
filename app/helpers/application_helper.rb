@@ -1,11 +1,4 @@
 module ApplicationHelper
-    def navItem(link_text, link_path, active=false)
-        class_name = (active || current_page?(link_path)) ? 'active' : ''
-
-        content_tag(:li, :class => class_name) do
-            link_to link_text, link_path
-        end
-    end
 
     def forum_path
       APP_CONFIG['forum_url']

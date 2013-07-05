@@ -47,3 +47,5 @@ gem 'jquery-rails'
 
 gem 'capistrano'
 gem 'capistrano-ext'
+
+gem "point_gaming_frontend", git: "git@github.com:pointgaming/point-gaming-frontend.git", branch: 'master'
