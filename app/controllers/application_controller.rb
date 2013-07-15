@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  include ::SslRequirement
 
   def forem_user
     current_user
